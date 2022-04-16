@@ -27,7 +27,7 @@ public class ClickAndMove : MonoBehaviour
          move = true;
 
         }
-        if (move == true) //baslangicta ekrana týklanmasa da hit.point=0,0,0 oldugu icin baslangýc hareketini engellemek adýna bool kullanildi
+        if (move == true) //Even if you don't click at the begining,the hit.point is (0,0,0).So bool move is used to avoid this case.
         transform.position = Vector3.MoveTowards(transform.position, hit.point, Time.fixedDeltaTime * speed);
         
 
